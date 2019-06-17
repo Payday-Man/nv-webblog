@@ -20,6 +20,6 @@ module.exports ={
     
     //get user by id
     show (req,res) {
-        res.send('Watch user data : ' + req.params.userID); 
+        res.send('Watch user data : ' + req.params.userId); 
     }
 };
