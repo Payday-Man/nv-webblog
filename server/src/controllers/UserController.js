@@ -4,7 +4,7 @@ module.exports ={
   //get all user
   async index (req,res) {
       try {
-        const users = await User.fainAll();
+        const users = await User.findAll();
         res.send(users);
     } catch (err){
         res.status(500).send({
