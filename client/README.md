@@ -35,6 +35,8 @@ npm install -g vue-cli
 ถ้าจะเริ่มทำ Service API  ให้ลง
 npm install --save axios
 
-
+SQLite3
+npm install --save sqlite3
+npm install --save sequelize
 
 ื
