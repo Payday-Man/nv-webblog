@@ -1,10 +1,10 @@
 const UserController = require("./controllers/UserController");
+const UserAuthenController = require("./controllers/UserAuthenController")
 
 module.exports = (app) => {
     /*RESFUL API for user management */
     // create user
     app.post('/user',UserController.create);
-    
     
     //edit user, suspend, active
     app.put('/user/:userId',UserController.put);
@@ -17,4 +17,7 @@ module.exports = (app) => {
     
     //get all user
     app.get('/users',UserController.index);
+
+    //get login
+    app.post('/Login',UserAuthenController.login)
 };

@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div v-if="this.user">
         <h1>Show User</h1>
         <p>ID: {{ user.id}}</p>
-        <p>ชืEอ-นามสกุล: {{ user.name }} - {{ user.lastname }}</p>
+        <p>ชือ-นามสกุล: {{ user.name }} - {{ user.lastname }}</p>
         <p>email: {{ user.email }}</p>
         <p>password: {{ user.password }}</p>
     </div>
@@ -20,6 +20,7 @@ export default {
             try {
             let userId = this.$route.params.userId
             this.user = (await UsersService.show(userId)).data
+            console.log(user.id,user.name,user.lastname)
             } catch (error) {
                 console.log (error)
             }
