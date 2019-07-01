@@ -11,6 +11,7 @@
            <p><button v-on:click="navigateTo('/user/'+user.id)">User Detail</button>
            <button v-on:click="navigateTo('/user/edit/'+user.id)">Edit User</button>
            <button v-on:click="deleteUser(user)">delete</button></p>
+        <p><button v-on:click="logout">Logout</button></p>
            <hr>
         </div>
     </div>
@@ -49,7 +50,14 @@ export default {
                  },
              async refreshData() {
                   this.users = (await UsersService.index()).data
-    }
+        },
+            logout(){
+                this.$store.dispatch('setToken', null)
+                this.$store.dispatch('setUser', null)
+                this.$router.push({
+                    name: 'login'
+                })
+        }
     }
 }
 </script>
