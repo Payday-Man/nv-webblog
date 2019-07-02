@@ -1,8 +1,9 @@
 <template>
     <div>
         <h2>Get All Users</h2>
+        <p><button v-on:click="logout">Logout</button></p>
         <h4>User Count {{users.length}}</h4>
-        <p><button v-on:click="navigateTo('/user/creat')">Create User</button></p>
+        <p><button v-on:click="navigateTo('/user/create')">Create User</button></p>
         <div v-for="user in users" v-bind:key="user.id">
         <div> ID: {{ user.id }}</div>
         <div> Name-Lastname: {{ user.name }} - {{ user.lastname }}</div>
@@ -11,7 +12,6 @@
            <p><button v-on:click="navigateTo('/user/'+user.id)">User Detail</button>
            <button v-on:click="navigateTo('/user/edit/'+user.id)">Edit User</button>
            <button v-on:click="deleteUser(user)">delete</button></p>
-        <p><button v-on:click="logout">Logout</button></p>
            <hr>
         </div>
     </div>
