@@ -9,9 +9,18 @@ import UserShow from '@/components/Users/ShowUser'
 //Authen
 import Login from '@/components/Login'
 
+//Comments
+import CommentIndex from '@/components/Comments/Index'
+
+//Blogs
+import BlogIndex from '@/components/Blogs/Index'
+import BlogCreate from '@/components/Blogs/CreateBlog'
+import BlogEdit from '@/components/Blogs/EditBlog'
+import BlogShow from '@/components/Blogs/ShowBlog'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       //authen
@@ -40,5 +49,36 @@ export default new Router({
       name: 'user',
       component: UserShow
     },
+    
+
+    //Blog
+    {
+      path: '/blogs',
+      name: 'blog-edit',
+      component: BlogIndex
+    },
+    {
+      path: '/blog/create',
+      name: 'blogs-edit',
+      component: BlogCreate
+    },
+    { 
+      path: '/blog/edit/:blogId',
+      name: 'blogs-edit',
+      component: BlogEdit
+    },
+    {
+      path: '/blog/:blogId',
+      name: 'blog',
+      component: BolgShow
+    },
+    
+
+    //Comments
+    {
+      path: '/comments',
+      name: 'comments',
+      component: CommentIndex
+    }
   ]
 })
