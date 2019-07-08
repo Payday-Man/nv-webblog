@@ -17,6 +17,7 @@ import BlogIndex from '@/components/Blogs/Index'
 import BlogCreate from '@/components/Blogs/CreateBlog'
 import BlogEdit from '@/components/Blogs/EditBlog'
 import BlogShow from '@/components/Blogs/ShowBlog'
+
 Vue.use(Router)
 
 export default new Router({
@@ -70,7 +71,7 @@ export default new Router({
     {
       path: '/blog/:blogId',
       name: 'blog',
-      component: BolgShow
+      component: BlogShow
     },
     
 
