@@ -13,7 +13,7 @@ import BackHeader from '@/components/Header.vue'
 Vue.config.productionTip = false
 
 Vue.use(VueResource)
-vue.component('back-header', BackHeader)
+Vue.component('back-header', BackHeader)
 
 sync(store, router)
 
