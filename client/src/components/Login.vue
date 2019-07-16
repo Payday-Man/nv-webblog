@@ -33,6 +33,7 @@
         this.$router.push({
           name: 'users'
         })
+
         console.log(response)
        
       } catch (error) {     

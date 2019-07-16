@@ -18,23 +18,41 @@ export default {
 }
 </script>
 <style scoped>
-    .nv-navbar {
-        background-color: palegoldenrod;
-        width: 100%;
-        padding: 10px 0px 10px 0px;
-    }
-    .nv-navbar .nav{
-        list-style-type: none;
-        margin:0;
-        padding:0;
-        float:left;
-    }
-    .nv-navbar .nav li a {
-        padding: 10px;
-        text-decoration: none;
-        color: darkslategrey;
-    }
-    .clearfix {
-        clear: left;
-    }
+     .nv-navbar {
+ background-color:palegoldenrod;
+ width: 100%;
+ padding:10px 0px 10px 0px;
+ }
+ .nv-navbar .nav {
+ list-style: none;
+ margin:0;
+ padding:0;
+ float:left;
+ }
+
+ .nv-navbar .nav li {
+ float:left;
+ }
+
+ .nv-navbar .nav li a {
+ padding: 10px;
+ text-decoration: none;
+ color:gray;
+ font-weight: bold;
+ }
+
+ .nv-navbar .nav li a:hover {
+ padding: 10px;
+ text-decoration: none;
+ color:darkslategrey;
+ }
+
+ .nv-navbar .nav li a.router-link-active {
+ background-color:gold;
+ color:darkslategrey;
+ }
+
+ .clearfix {
+ clear: left;
+ }
 </style>
