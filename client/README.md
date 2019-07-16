@@ -30,7 +30,7 @@ npm install -g vue-cli
 ืnpm install --save vue-resource
 
 แต่จะเรียก ดูข้อมูลใน Console log ไม่ได้จะติด Cross-Origin ต้องลง
-ืnpm install --save cors
+npm install --save cors
 
 ถ้าจะเริ่มทำ Service API  ให้ลง
 npm install --save axios
@@ -39,4 +39,6 @@ SQLite3
 npm install --save sqlite3
 npm install --save sequelize
 
+Cors 
+npm install --save cors 
 ื
